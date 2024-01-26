@@ -130,7 +130,7 @@ public class KeycloackServiceImpl implements IKeycloackService {
             List<RoleRepresentation> roles = null;
 
             if(userDTO.getRoles() == null || userDTO.getRoles().isEmpty()) {
-                roles = List.of(realmResource.roles().get("admin").toRepresentation());
+                roles = List.of(realmResource.roles().get("Administrator").toRepresentation());
             } else {
                 roles = realmResource.roles().list()
                         .stream()
